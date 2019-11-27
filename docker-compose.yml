@@ -1,0 +1,18 @@
+# vim:ff=unix:ts=2:sw=2:ai:expandtab
+---
+version: '3.5'
+services:
+  flatpak-builder:
+    build:
+      context: .
+    #cap_add:
+    #  - SYS_ADMIN
+    image: flatpak-builder
+    privileged: true
+    #security_opt:
+      #- seccomp=flatpak-seccomp.json
+      #- seccomp=unconfined
+      #- apparmor=unconfined
+    volumes:
+      - /proc:/proc
+      - /var/cache/flatpak:/var/lib/builder/.local/share/flatpak

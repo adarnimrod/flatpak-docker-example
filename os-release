@@ -1,0 +1,4 @@
+NAME=Endless
+VERSION=master (Flatpak runtime)
+VERSION_ID=master
+ID=com.endlessm.apps.Platform
